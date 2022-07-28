@@ -1,11 +1,33 @@
 import styled from "styled-components";
 
-export const Main = styled.main`
+export const ContainerGeral = styled.main`
   width: 100%;
   height: 100%;
 
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+
+  @media screen and (min-width: 800px) {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+
+    ul {
+      flex-wrap: wrap;
+      width: 900px;
+      margin: 35px 0 0 8%;
+    }
+
+    section {
+      width: 300px;
+      margin: 50px 8% 0 0;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
 `;
 
 export const UlListaProdutos = styled.ul`

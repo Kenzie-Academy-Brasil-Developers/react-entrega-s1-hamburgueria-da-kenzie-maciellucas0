@@ -1,7 +1,7 @@
 import Product from "../Product/Product";
 import { LiListaProdutos, UlListaProdutos } from "./style";
 
-const ProductList = ({ products, setProducts }) => {
+const ProductList = ({ products }) => {
   return (
     <>
       <UlListaProdutos>

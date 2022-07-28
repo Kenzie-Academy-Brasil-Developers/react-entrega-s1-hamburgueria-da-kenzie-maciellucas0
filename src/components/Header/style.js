@@ -15,19 +15,19 @@ export const HeaderStyle = styled.header`
 
     div {
       position: absolute;
-      left: 5%;
+      left: 8%;
     }
 
     input {
       position: absolute;
-      right: 5%;
+      right: 8%;
       width: 300px;
     }
 
     button {
       position: absolute;
-      right: 5.5%;
-      top: 2.75%;
+      right: 8.5%;
+      top: 2.5%;
     }
   }
 
@@ -83,7 +83,7 @@ export const Botao = styled.button`
   color: #ffffff;
 
   position: absolute;
-  right: 10%;
+  right: 7.5%;
   top: 9.5%;
 
   cursor: pointer;
