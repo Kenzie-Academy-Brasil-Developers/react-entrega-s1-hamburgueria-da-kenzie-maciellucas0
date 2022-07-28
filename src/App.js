@@ -11,26 +11,27 @@ import "./App.css";
 
 function App() {
   const [products, setProducts] = useState([]);
+  const [carrinho, setCarrinho] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
-  const [currentSale, setCurrentSale] = useState([]);
-  const [cartTotal, setCartTotal] = useState(0);
 
   useEffect(() => {
     api.get("/products").then((response) => setProducts(response.data));
   }, []);
 
+  useEffect(() => {
+    setFilteredProducts(products);
+  }, [products]);
+
   return (
     <>
       <Global />
-      <Header
-        products={products}
-        setProducts={setProducts}
-        filteredProducts={filteredProducts}
-        setFilteredProducts={setFilteredProducts}
-      />
+      <Header setFilteredProducts={setFilteredProducts} products={products} />
       <ContainerGeral>
-        <ProductList products={products} setProducts={setProducts} />
-        <KartProduct />
+        <ProductList
+          filteredProducts={filteredProducts}
+          setCarrinho={setCarrinho}
+        />
+        <KartProduct carrinho={carrinho} setCarrinho={setCarrinho} />
       </ContainerGeral>
     </>
   );

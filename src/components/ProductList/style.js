@@ -32,7 +32,7 @@ export const ContainerGeral = styled.main`
 
 export const UlListaProdutos = styled.ul`
   display: flex;
-  margin-top: 25px;
+  margin-top: 10px;
   overflow: auto;
 
   @media screen and(min-width: 800px) {
@@ -98,7 +98,7 @@ export const LiListaProdutos = styled.li`
 `;
 
 export const ImagemListaProdutos = styled.img`
-  width: 250px;
+  width: 264px;
   height: 210px;
 
   background-color: #f5f5f5;

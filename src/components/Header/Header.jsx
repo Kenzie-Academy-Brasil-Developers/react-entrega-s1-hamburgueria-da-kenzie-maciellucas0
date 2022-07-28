@@ -1,21 +1,20 @@
 import { Botao, HeaderStyle, Input } from "./style";
 import { useState } from "react";
 
-const Header = (
-  products,
-  setProducts,
-  filteredProducts,
-  setFilteredProducts
-) => {
+const Header = ({ products, setFilteredProducts }) => {
   const [valorInput, setValorInput] = useState("");
 
   function filtrarInput(e) {
     e.preventDefault();
 
-    const itensFiltrados = products.products.filter(
-      (item) => item.name === valorInput || item.category === valorInput
-    );
-    itensFiltrados.map((item, index) => setProducts(item));
+    if (valorInput === "") {
+      setFilteredProducts(products);
+    } else {
+      const itensFiltrados = products.filter(
+        (item) => item.name === valorInput || item.category === valorInput
+      );
+      setFilteredProducts(itensFiltrados);
+    }
   }
 
   return (

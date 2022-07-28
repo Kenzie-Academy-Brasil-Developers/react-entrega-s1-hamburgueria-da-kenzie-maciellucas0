@@ -1,13 +1,18 @@
 import Product from "../Product/Product";
-import { LiListaProdutos, UlListaProdutos } from "./style";
+import { LiListaProdutos, UlListaProdutos, Botao } from "./style";
 
-const ProductList = ({ products }) => {
+const ProductList = ({ filteredProducts, setCarrinho }) => {
+  function identificaProduto(item) {
+    setCarrinho((oldCarrinho) => [...oldCarrinho, item]);
+  }
+
   return (
     <>
       <UlListaProdutos>
-        {products.map((item, index) => (
+        {filteredProducts.map((item, index) => (
           <LiListaProdutos key={index}>
             <Product item={item}></Product>
+            <Botao onClick={() => identificaProduto(item)}>Adicionar</Botao>
           </LiListaProdutos>
         ))}
       </UlListaProdutos>
