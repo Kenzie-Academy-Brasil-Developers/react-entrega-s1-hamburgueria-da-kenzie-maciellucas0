@@ -4,9 +4,19 @@ export const ContainerGeral = styled.main`
   width: 100%;
   height: 100%;
 
+  position: relative;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  img {
+    width: 265px;
+  }
+
+  li {
+    width: 270px;
+  }
 
   @media screen and (min-width: 800px) {
     width: 100vw;
@@ -19,13 +29,13 @@ export const ContainerGeral = styled.main`
       margin: 35px 0 0 8%;
     }
 
-    section {
-      width: 300px;
-      margin: 50px 8% 0 0;
+    button {
+      margin-left: 70px;
     }
 
-    img {
-      width: 100%;
+    #containerMaior {
+      margin-right: 100px;
+      margin-top: 30px;
     }
   }
 `;
@@ -89,7 +99,7 @@ export const Botao = styled.button`
 
 export const LiListaProdutos = styled.li`
   list-style: none;
-  width: 270px;
+  width: 230px;
 
   margin: 10px;
 
@@ -98,7 +108,7 @@ export const LiListaProdutos = styled.li`
 `;
 
 export const ImagemListaProdutos = styled.img`
-  width: 264px;
+  width: 99.8%;
   height: 210px;
 
   background-color: #f5f5f5;

@@ -84,7 +84,7 @@ export const Botao = styled.button`
 
   position: absolute;
   right: 7.5%;
-  top: 9.5%;
+  top: 12%;
 
   cursor: pointer;
 `;

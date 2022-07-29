@@ -7,16 +7,36 @@ export const SectionCarrinho = styled.section`
 
   background-color: #f5f5f5;
   height: 160px;
-  overflow-x: hidden; /* Hide horizontal scrollbar */
-  overflow-y: scroll; /* Add vertical scrollbar */
 
   border-radius: 5px;
   margin: auto;
   margin-top: 20px;
+
+  @media (min-width: 800px) {
+    width: 444px;
+    section {
+      width: 320px;
+      position: absolute;
+      right: 7.6%;
+
+      #pcarrinhoCheio {
+        width: auto;
+        position: absolute;
+        top: 60%;
+        left: 12%;
+      }
+    }
+
+    ul {
+      margin: 0 auto;
+      height: 300px;
+    }
+  }
+
   div {
     width: 100%;
     display: flex;
-    align-items: center;
+
     font-family: "Inter";
     font-size: 13px;
     font-weight: 900;
@@ -27,17 +47,6 @@ export const SectionCarrinho = styled.section`
     height: 50px;
     padding: 15px;
     border-radius: 5px;
-  }
-
-  p {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    margin-top: 50px;
-
-    text-align: center;
-    margin-bottom: 5px;
   }
 
   span {
@@ -55,6 +64,8 @@ export const SectionCarrinho = styled.section`
   ul {
     background-color: #f5f5f5;
     width: 90%;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 
   li {
@@ -63,16 +74,17 @@ export const SectionCarrinho = styled.section`
 
     margin: 15px;
   }
+
   #divCarrinho {
     color: black;
     background-color: #f5f5f5;
   }
+
   h2 {
     width: 130px;
     font-family: "Inter";
     font-weight: 700;
     font-size: 17px;
-    line-height: 24px;
   }
 
   img {
@@ -91,17 +103,28 @@ export const SectionCarrinho = styled.section`
     color: #828282;
     cursor: pointer;
     position: relative;
-    right: 20%;
+    right: 12%;
   }
 
   #pcarrinhoCheio {
+    top: 60px;
     position: relative;
     right: 195px;
     color: #828282;
     font-weight: 200;
+    font-family: "Inter";
+    font-size: 14px;
   }
 `;
+export const PCarrinhoVazio = styled.p`
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 30px;
 
+  text-align: center;
+`;
 export const Linha = styled.img`
   width: 90%;
   height: 4px;
@@ -133,6 +156,12 @@ export const DivTotalPrice = styled.div`
     color: #828282;
     font-weight: 200;
   }
+  @media (min-width: 800px) {
+    top: 22%;
+    right: 45.7%;
+    margin-left20px;;
+    width: 443px;
+  }
 `;
 
 export const DivLinha = styled.div`
@@ -142,6 +171,15 @@ export const DivLinha = styled.div`
   width: 90%;
   display: flex;
   justify-content: center;
+
+  @media (min-width: 800px) {
+    width: 100%;
+    img {
+      width: 290px;
+      top: 21.5%;
+      margin-right: 14%;
+    }
+  }
 `;
 
 export const BotaoRemoverTudo = styled.button`
@@ -164,4 +202,12 @@ export const BotaoRemoverTudo = styled.button`
   position: absolute;
   bottom: 20px;
   margin-left: 15%;
+
+  @media (min-width: 800px) {
+    position: absolute;
+    margin: 0;
+    width: 200px;
+    bottom: 60%;
+    right: 12%;
+  }
 `;
