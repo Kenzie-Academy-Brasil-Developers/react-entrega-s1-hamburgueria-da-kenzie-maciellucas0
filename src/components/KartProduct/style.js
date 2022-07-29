@@ -159,7 +159,7 @@ export const DivTotalPrice = styled.div`
   @media (min-width: 800px) {
     top: 22%;
     right: 45.7%;
-    margin-left20px;;
+
     width: 443px;
   }
 `;
